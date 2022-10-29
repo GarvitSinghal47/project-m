@@ -1,133 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Password Strength Analysis</title>
-    <!-- Bootstrap -->
-    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
-
-</head>
-
-<body>
+{% extends 'template.html' %}
 
 
-    <h3 class="text-center" style="padding:15px">CHECK YOUR PASSWORD STRENGTH</h3>
+{% block main %}
+
+
+    <h3 class="text-center" style="padding:35px;color:rgb(255, 255, 255); font-size:40px;">PASSWORD STRENGTH ANALYSIS</h3>
+
     
-        <div class="col-md-8" style="text-align:center;margin: 0 auto;">
-            <form method="POST">
-                <input type="text" class="form-control" placeholder="Enter Password" name="password" value="{{ request.form.password }}"
-                    required><br>
-                <div class="button-group">
-                    <button type="submit" name="submit" class="btn btn-primary">Check</button>
+        <div class="col-md-8" id="form-style" style="text-align:center;margin: 0 auto;">
+            <form method="POST" >
+                <input type="text" class="form-control" placeholder="Enter Password" name="password" required>
+                <div class="button-group" style="margin-top:25px;">
+                    <button type="submit" name="submit" class="btn btn-danger btn btn-secondary btn-lg btn-block">Check</button>
                 </div>
             </form>
-        </div>
-    
+        </div>    
 
 
     
-        <div class="col-md-8" style="margin: 0 auto; margin-top:25px;">
+        <div class="col-md-8" style="margin: 0 auto; margin-top:90px;">
             <table class="table table-bordered" bordercolor="black">
                 <thead>
-                    <tr>
+                    <tr class="table-dark">
                         <th scope="col">ALGORITHM</th>
                         <th scope="col">STRENGTH</th>
                     </tr>
                 </thead>
         
-                <tbody>
+                <tbody >
                     {% if (DecisionTree == 0) %}
-                        <tr style="background-color: #fd0a0a;">
+                        <tr style="background-color: #f85959;">
                             <td>Decision Tree</td>
                             <td>Weak</td>
                         </tr>
                     {% endif %}
                     {% if (DecisionTree == 1) %}
-                        <tr style="background-color: #f7f311;">
+                        <tr style="background-color: #fcf974;">
                             <td>Decision Tree</td>
                             <td>Medium</td>
                         </tr>
                     {% endif %}
                     {% if (DecisionTree == 2) %}
-                        <tr style="background-color: #53d653;">
+                        <tr style="background-color: #92f892;">
                             <td>Decision Tree</td>
                             <td>Strong</td>
                         </tr>
                     {% endif %}
 
                     {% if (LogReg == 0) %}
-                        <tr style="background-color: #fd0a0a;">
+                        <tr style="background-color: #f85959;">
                             <td>Logistic Regression</td>
                             <td>Weak</td>
                         </tr>
                     {% endif %}
                     {% if (LogReg == 1) %}
-                        <tr style="background-color: #f7f311;">
+                        <tr style="background-color: #fcf974;">
                             <td>Logistic Regression</td>
                             <td>Medium</td>
                         </tr>
                     {% endif %}
                     {% if (LogReg == 2) %}
-                        <tr style="background-color: #53d653;">
+                        <tr style="background-color: #92f892;">
                             <td>Logistic Regression</td>
                             <td>Strong</td>
                         </tr>
                     {% endif %}
 
                    {% if (NaiveBayes == 0) %}
-                        <tr style="background-color: #fd0a0a;">
+                        <tr style="background-color: #f85959;">
                             <td>Naive Bayes</td>
                             <td>Weak</td>
                         </tr>
                     {% endif %}
                     {% if (NaiveBayes == 1) %}
-                        <tr style="background-color: #f7f311;">
+                        <tr style="background-color: #fcf974;">
                             <td>Naive Bayes</td>
                             <td>Medium</td>
                         </tr>
                     {% endif %}
                     {% if (NaiveBayes == 2) %}
-                        <tr style="background-color: #53d653;">
+                        <tr style="background-color: #92f892">
                             <td>Naive Bayes</td>
                             <td>Strong</td>
                         </tr>
                     {% endif %}
                     {% if (RandomForest == 0) %}
-                        <tr style="background-color: #fd0a0a;">
+                        <tr style="background-color: #f85959;">
                             <td>Random Forest</td>
                             <td>Weak</td>
                         </tr>
                     {% endif %}
                     {% if (RandomForest == 1) %}
-                        <tr style="background-color: #f7f311;">
+                        <tr style="background-color: #fcf974;">
                             <td>Random Forest</td>
                             <td>Medium</td>
                         </tr>
                     {% endif %}
                     {% if (RandomForest == 2) %}
-                        <tr style="background-color: #53d653;">
+                        <tr style="background-color: #92f892;">
                             <td>Random Forest</td>
                             <td>Strong</td>
                         </tr>
                     {% endif %}
 
                     {% if (NeuralNetwork == 0) %}
-                        <tr style="background-color: #fd0a0a;">
+                        <tr style="background-color: #f85959;">
                             <td>Neural Network</td>
                             <td>Weak</td>
                         </tr>
                     {% endif %}
                     {% if (NeuralNetwork == 1) %}
-                        <tr style="background-color:  #f7f311;">
+                        <tr style="background-color:  #fcf974;">
                             <td>Neural Network</td>
                             <td>Medium</td>
                         </tr>
                     {% endif %}
                     {% if (NeuralNetwork == 2) %}
-                        <tr style="background-color: #53d653;">
+                        <tr style="background-color: #92f892;">
                             <td>Neural Network</td>
                             <td>Strong</td>
                         </tr>
@@ -141,6 +131,4 @@
         </div>
     
 
-</body>
-
-</html>
+{% endblock %}

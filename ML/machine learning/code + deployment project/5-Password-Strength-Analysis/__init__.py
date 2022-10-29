@@ -1,5 +1,7 @@
+from distutils.log import debug
 from flask import Flask, render_template, flash, request
 import joblib
+from recommender import *
 
 app = Flask(__name__)
  # Load the algorithm models
@@ -40,5 +42,28 @@ def mainpage():
                                         NeuralNetwork=NeuralNetwork_Test
                                         )
 
-if __name__ == "__main__":
-    app.run()
+
+
+@app.route('/recommend', methods=['GET', 'POST'])
+def recommend():
+    if request.method == "POST":
+        passwordlength = int(request.form['passwordlength'])
+        alphabetcount = int(request.form['alphabetcount'])
+        numbercount = int(request.form['digitcount'])
+        specialcharcount=int(request.form['specialcharcount'])
+
+        # invoking the function
+        data, passwordlist =generate_random_password(passwordlength,alphabetcount,numbercount,specialcharcount)
+        
+        
+
+        return render_template('recommend.html',data=data,passwordlist=passwordlist)
+    
+    else:
+        return render_template('recommend.html')
+
+
+    
+
+if __name__ == "__main__":   
+    app.run(debug=True)
