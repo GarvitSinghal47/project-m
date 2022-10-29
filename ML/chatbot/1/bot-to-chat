@@ -1,0 +1,202 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled6.ipynb",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "import os\n",
+        "import matplotlib as mpl\n",
+        "if os.environ.get('DISPLAY','') == '':\n",
+        "    print('no display found. Using non-interactive Agg backend')\n",
+        "    mpl.use('Agg')\n",
+        "import matplotlib.pyplot as plt"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "18j8bM2edQcB",
+        "outputId": "fa5ab9f2-6963-4602-d799-cc448f44e287"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "no display found. Using non-interactive Agg backend\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "BGExn0d5edJK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import nltk\n",
+        "nltk.download('punkt')\n",
+        "nltk.download('wordnet')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cdIHmgfHdtE6",
+        "outputId": "ecec3a02-c3c7-4137-96c8-38d2dab47126"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[nltk_data] Downloading package punkt to /root/nltk_data...\n",
+            "[nltk_data]   Package punkt is already up-to-date!\n",
+            "[nltk_data] Downloading package wordnet to /root/nltk_data...\n",
+            "[nltk_data]   Unzipping corpora/wordnet.zip.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5wAapRzDco_T"
+      },
+      "outputs": [],
+      "source": [
+        "#Creating GUI with tkinter\n",
+        "import tkinter\n",
+        "from tkinter import *\n",
+        "import nltk\n",
+        "from nltk.stem import WordNetLemmatizer\n",
+        "lemmatizer = WordNetLemmatizer()\n",
+        "import pickle\n",
+        "import numpy as np\n",
+        "\n",
+        "from keras.models import load_model\n",
+        "model = load_model('chatbot_model.h5')\n",
+        "import json\n",
+        "import random\n",
+        "intents = json.loads(open('intents.json').read())\n",
+        "words = pickle.load(open('words.pkl','rb'))\n",
+        "classes = pickle.load(open('classes.pkl','rb'))\n",
+        "\n",
+        "def clean_up_sentence(sentence):\n",
+        "    # tokenize the pattern - split words into array\n",
+        "    sentence_words = nltk.word_tokenize(sentence)\n",
+        "    # stem each word - create short form for word\n",
+        "    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]\n",
+        "    return sentence_words\n",
+        "# return bag of words array: 0 or 1 for each word in the bag that exists in the sentence\n",
+        "\n",
+        "def bow(sentence, words, show_details=True):\n",
+        "    # tokenize the pattern\n",
+        "    sentence_words = clean_up_sentence(sentence)\n",
+        "    # bag of words - matrix of N words, vocabulary matrix\n",
+        "    bag = [0]*len(words) \n",
+        "    for s in sentence_words:\n",
+        "        for i,w in enumerate(words):\n",
+        "            if w == s: \n",
+        "                # assign 1 if current word is in the vocabulary position\n",
+        "                bag[i] = 1\n",
+        "                if show_details:\n",
+        "                    print (\"found in bag: %s\" % w)\n",
+        "    return(np.array(bag))\n",
+        "\n",
+        "def predict_class(sentence, model):\n",
+        "    # filter out predictions below a threshold\n",
+        "    p = bow(sentence, words,show_details=False)\n",
+        "    res = model.predict(np.array([p]))[0]\n",
+        "    ERROR_THRESHOLD = 0.25\n",
+        "    results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]\n",
+        "    # sort by strength of probability\n",
+        "    results.sort(key=lambda x: x[1], reverse=True)\n",
+        "    return_list = []\n",
+        "    for r in results:\n",
+        "        return_list.append({\"intent\": classes[r[0]], \"probability\": str(r[1])})\n",
+        "    return return_list\n",
+        "\n",
+        "def getResponse(ints, intents_json):\n",
+        "    tag = ints[0]['intent']\n",
+        "    list_of_intents = intents_json['intents']\n",
+        "    for i in list_of_intents:\n",
+        "        if(i['tag']== tag):\n",
+        "            result = random.choice(i['responses'])\n",
+        "            break\n",
+        "    return result\n",
+        "\n",
+        "def chatbot_response(text):\n",
+        "    ints = predict_class(text, model)\n",
+        "    res = getResponse(ints, intents)\n",
+        "    return res\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "chatbot_response(\"\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "VQ4PIv4tdmoj",
+        "outputId": "20d46ea0-e4e5-4d1e-cfaf-1b5110f31908"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Good to see you again'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+	.movie {
+	    color: #fff;
+	    margin-left: auto;
+	    margin-right: auto;
+	    resize: none;
+	}
+
+	.btn-block {
+	    width: 15%;
+	    text-align: center;
+	    margin-left: auto;
+	    margin-right: auto;
+	    color: #e4e0e0;
+	}
+
+	#content {
+	    background-image: url("../static/image.png");
+	    background-color: #181818
+	}
+
+	.footer {
+	    color: #e4e0e0;
+	    text-align: right;
+	    position: fixed;
+	    bottom: 20px;
+	    right: 20px;
+	    width: 100%;
+	}
+
+	.card {
+	    cursor: pointer;
+	}
+
+	h1 {
+	    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	    color: #e50914;
+	    font-weight: bold;
+	    margin-top: 30px;
+	}
+
+	#autoComplete {
+	    background-position: 780px;
+	}

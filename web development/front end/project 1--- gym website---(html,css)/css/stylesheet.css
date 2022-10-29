@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Balsamiq Sans',cursive;
+    
+}
+.left{
+background-color: #fff;
+display: inline-block;
+float: left;
+}
+.right{
+background-color: #fff;
+display: inline-block;
+float: right;
+
+}
+/* when  we want to display a item in middle first the display must be block,then give width to it,and then set margin 0 auto  */
+.centre{
+
+display: block;
+width:550px;
+margin:0 auto;
+margin-top: 20px;
+
+}
+nav{
+    padding-left: 20px;
+}
+
+nav li{
+display:inline-block;
+margin: 10px;
+display:bold;
+font-size: 19px;
+
+}
+
+nav li a{
+    color: orange;
+    text-decoration: none;
+
+}
+
+nav li a:hover{
+    color: rgb(255, 255, 59);
+    font-size: 26px;
+
+}
+nav li a:active{
+    text-decoration: underline;
+    background-color:rgb(122, 172, 109);
+   
+}
+
+#logo{
+    width: 130px;
+    position: absolute;
+    top: 2px;
+    left: 20px;
+}
+
+.left>div{
+    position:absolute;
+   
+    margin-top: 87px ;
+    margin-left: 45px;
+    font-size: 20px;
+    color:orange;
+}
+    
+div .btn{
+    
+    margin:0px;
+    padding:0px;
+    background-color: black;
+    color:orange;
+    padding: 4px 14px;
+    
+    border: 2px solid grey;
+    font-size:  20px;
+    
+
+}
+
+.btn:hover{
+  color: rgb(213, 240, 117);
+    text-transform: capitalize;
+    border-radius: 10px;
+    
+    
+}
+
+.container{
+    border: 2px solid rgb(255, 152, 0);
+    margin: 98px 80px 80px 56px;
+    width: 495px;
+    height: 372px;
+    border-radius: 25px;
+    padding-left: 15px;
+}
+.form-group>input{
+ 
+    display: block;
+    width: 356px;
+    font-size: 20px;
+    margin: 5px auto;
+    border-radius: 25px;
+    padding-left: 10px;
+    text-align: center;
+    font-family: 'Balsamiq Sans',cursive;
+    margin-top: 18px;
+    outline: none;
+}
+
+.container>h1{
+    font-size: 23px;
+    color: #faebe6;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Balsamiq Sans',cursive;
+}
+
+.container button{
+    display: block;
+    width: 74%;
+    margin: 0 auto;
+    padding: 9px;
+    margin-top: 15px;
+}
+

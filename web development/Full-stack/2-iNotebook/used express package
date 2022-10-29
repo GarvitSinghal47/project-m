@@ -1,0 +1,6 @@
+1.bcrypt for encryption
+2.express validator for validation of the data entered by the user in auth.js
+3.nodemon is the express dependency used for the auth running of express and mongodb server on addition and deletion of any data in backend
+4.jsonwebtoken is used to given an individual a token to login for its session on app.it is a method to verify a user.
+
+5.cors is used to run or change the api in the top domain of the serach bar
