@@ -12,28 +12,28 @@ pins are saved to a database.
 
 1.Register
 
-![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/projects-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/1-register.jpg)
+![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/project-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/1-register.jpg)
 
 2.Login
 
-![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/projects-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/2-login.jpg)
+![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/project-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/2-login.jpg)
 
 3.Add Pin
 
-![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/projects-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/3-add%20pin.jpg)
+![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/project-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/3-add%20pin.jpg)
 
 
 4.Pin Lookup
 
-![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/projects-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/4-pin%20lookup.jpg)
+![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/project-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/4-pin%20lookup.jpg)
 
 5. Login View
 
-![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/projects-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/5-login%20view.jpg)
+![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/project-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/5-login%20view.jpg)
 
 6. Logout View
 
-![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/projects-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/6-logout%20view.jpg)
+![App Screenshot](https://raw.githubusercontent.com/GarvitSinghal47/project-m/main/web%20development/Full-stack/3-map%20pin%20app/screenshot/6-logout%20view.jpg)
 
 
 
