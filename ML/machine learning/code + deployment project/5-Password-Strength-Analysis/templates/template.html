@@ -24,13 +24,23 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/recommend">Recommend</a>
       
     </ul>
+    
+    <ul class="navbar-nav " >
+      <li class="nav-item ">
+        <a class="nav-link" href="/manage">Manage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+    </ul>
+    
   </div>
+
 </nav>
 
 {% block main %}
@@ -51,6 +61,19 @@
                 (item2);
                 alert("copied")
         }
+         
+        function showpassword(item) {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+      
     </script>
+
+
 
 </html>

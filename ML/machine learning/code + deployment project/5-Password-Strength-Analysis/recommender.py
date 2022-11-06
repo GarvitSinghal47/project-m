@@ -44,7 +44,7 @@ def generate_random_password( length,alphabets_count,digits_count,special_charac
 
         ## if the total characters count is less than the password length
         ## add random characters to make it equal to the length
-        if characters_count < length:
+        if characters_count <= length:
             random.shuffle(characters)
             for i in range(length - characters_count):
                 password+=random.choice(characters)

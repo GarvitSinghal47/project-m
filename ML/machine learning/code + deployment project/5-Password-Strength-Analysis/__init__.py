@@ -1,9 +1,25 @@
 from distutils.log import debug
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash, request,redirect
+from flask_sqlalchemy import SQLAlchemy
 import joblib
 from recommender import *
 
 app = Flask(__name__)
+app.app_context().push()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///manager.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+class Manager(db.Model):
+
+    sno=db.Column(db.Integer,primary_key=True)
+    website=db.Column(db.String(200),nullable=False)
+    emailid=db.Column(db.String(200),nullable=False)
+    password =db.Column(db.String(500), nullable=False)
+    
+    def __repr__(self) -> str:
+        return f"{self.sno} - {self.website}"
+
  # Load the algorithm models
 DecisionTree_Model = joblib.load('model/DecisionTree_Model.joblib')
 LogisticRegression_Model = joblib.load('model/LogisticRegression_Model.joblib')
@@ -63,7 +79,56 @@ def recommend():
         return render_template('recommend.html')
 
 
+@app.route('/manage', methods=['GET', 'POST'])
+def manager() :
+    alldata=Manager.query.all()
+    if request.method == "POST":
+        website = request.form['website']
+        email = request.form['email']
+        password = request.form['password']
+        
+        manageinstance=Manager(website=website,emailid=email,password=password)
+        db.session.add(manageinstance)
+        db.session.commit()
+        alldata = Manager.query.all()
+
+        print(website)
+
+        return render_template('manager.html', data=alldata,value=1)
     
+    else:
+        
+        return render_template('manager.html',value=1,data=alldata)
+
+
+@app.route('/delete/<int:sno>')
+def delete(sno):
+    todelete=Manager.query.filter_by(sno=sno).first()
+    db.session.delete(todelete)
+    db.session.commit()
+    return redirect("/manage")
+    
+
+@app.route('/update/<int:sno>', methods=['GET', 'POST'])
+def update(sno):
+    if request.method == "POST":
+        website = request.form["website"]
+        email = request.form['email']
+        password = request.form['password']
+        toupdate = Manager.query.filter_by(sno=sno).first()
+        toupdate.website=website
+        toupdate.emailid=email
+        toupdate.password=password
+        
+        db.session.add(toupdate)
+        db.session.commit()
+        return redirect("/manage")
+
+
+    toupdate = Manager.query.filter_by(sno=sno).first()
+    return render_template('update.html',toupdate=toupdate)
+
+
 
 if __name__ == "__main__":   
     app.run(debug=True)
