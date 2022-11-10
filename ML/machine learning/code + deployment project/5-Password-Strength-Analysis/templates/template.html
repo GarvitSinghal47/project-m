@@ -31,14 +31,26 @@
       
     </ul>
     
-    <ul class="navbar-nav " >
-      <li class="nav-item ">
-        <a class="nav-link" href="/manage">Manage</a>
-      </li>
+    <ul class="navbar-nav">
+        {% if not current_user.is_authenticated %}
+      
       <li class="nav-item">
         <a class="nav-link" href="/login">Login</a>
-    </ul>
+      </li>
     
+      <li class="nav-item">
+        <a class="nav-link" href="/signup">SignUp</a>
+      </li>
+      {% endif %}
+
+      {% if current_user.is_authenticated %}
+      <li class="nav-item active">
+        <a class="nav-link" href="/manage">Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+      {% endif %}
   </div>
 
 </nav>
@@ -46,7 +58,6 @@
 {% block main %}
 
 {% endblock %}
-</body>
    <script>
     
         function copyText(item) {
@@ -62,18 +73,22 @@
                 alert("copied")
         }
          
-        function showpassword(item) {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
+function showpassword(data) {
+    var x = document.getElementById(`mytemp${data}`);
+  if (x.style.display === "none") {
+    x.style.display = "block";
   } else {
-    x.type = "password";
+    x.style.display = "none";
   }
 }
+
+
 
       
     </script>
 
+
+</body>
 
 
 </html>

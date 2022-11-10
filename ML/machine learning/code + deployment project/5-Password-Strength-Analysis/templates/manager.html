@@ -2,10 +2,10 @@
 
 {% block main %}
  <div class="container ">
-   <h3 class="text-center" style="padding:35px;color:rgb(255, 255, 255); font-size:35px;">PASSWORD Manager</h3>
+  <h3 class="text-center" style="padding:35px;color:rgb(255, 255, 255); font-size:35px;">PASSWORD Manager</h3>
 
 <form style="color:rgb(255, 255, 255)"  class="mx-5 px-4" method="POST">
-   
+
   <div class="form-group my-4 ">
     <label for="website"> Website </label>
     <input type="url" class="form-control" id="website" aria-describedby="numberHelp" placeholder="Enter website url"  required name="website">
@@ -61,7 +61,7 @@
       <div class="card-body my-2">
       <div class=" my-2">Website -- {{item.website}}</div>
         <div class=" my-2">Email -- {{item.emailid}}</div>
-       <div class=" my-2 "> 
+       <div style="display:none" class=" my-2 " id="mytemp{{item.sno}}" > 
         Password -- {{item.password}}
 
         
@@ -69,7 +69,7 @@
       </div>
         
       <span class=" text-center my-1">
-        <button onclick="" type="button" class="btn btn-danger btn-sm ">Show password </button>
+        <button onclick=showpassword({{item.sno|string}}) type="button" class="btn btn-danger btn-sm ">Show password </button>
       <button onclick="window.location.href='/update/{{item.sno}}'" type="button" class="btn btn-danger btn-sm ">Update</button>
 
       <button onclick="window.location.href='/delete/{{item.sno}}'" type="button" class="btn btn-danger btn-sm mx-1">Delete</button>
