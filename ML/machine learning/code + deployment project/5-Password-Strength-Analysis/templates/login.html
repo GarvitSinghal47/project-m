@@ -1,13 +1,13 @@
 {% extends "template.html" %}
 
 {% block main %}
-	<div class="container">
+	<div >
         <!-- RESPONSIVE CLASSES -->
       
       <!--FOR FLASH MESSAGES-->
       {% with messages = get_flashed_messages() %}
 		{% if messages %}
-		    <div class="notification is-danger">
+		    <div style="color: white; background-color:rgb(201, 3, 3) ; padding:10px" class="notification is-danger ">
 		        {{ messages[0] }}
 		    </div>
 		{% endif %}
