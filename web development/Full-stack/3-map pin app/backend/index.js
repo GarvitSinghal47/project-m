@@ -10,7 +10,7 @@ const pinRoute = require("./routes/pins");
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/mappin", {
+  .connect("mongodb://127.0.0.1:27017/mappin", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
