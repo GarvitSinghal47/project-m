@@ -1,0 +1,14 @@
+C:\Users\Garvit Agarwal\Desktop\htm\dassi-solana-program-main\target\debug\deps\zerocopy-780dc3f37ba742ba.rmeta: C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\lib.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macros.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macro_util.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\util.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\third_party\rust\layout.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\wrappers.rs
+
+C:\Users\Garvit Agarwal\Desktop\htm\dassi-solana-program-main\target\debug\deps\libzerocopy-780dc3f37ba742ba.rlib: C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\lib.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macros.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macro_util.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\util.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\third_party\rust\layout.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\wrappers.rs
+
+C:\Users\Garvit Agarwal\Desktop\htm\dassi-solana-program-main\target\debug\deps\zerocopy-780dc3f37ba742ba.d: C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\lib.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macros.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macro_util.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\util.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\third_party\rust\layout.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\wrappers.rs
+
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\lib.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macros.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\macro_util.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\util.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\third_party\rust\layout.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\zerocopy-0.7.18\src\wrappers.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.7.18

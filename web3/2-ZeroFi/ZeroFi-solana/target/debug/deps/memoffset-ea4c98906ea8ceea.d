@@ -1,0 +1,10 @@
+C:\Users\Garvit Agarwal\Desktop\htm\ZeroFi-solana-program-main\target\debug\deps\memoffset-ea4c98906ea8ceea.rmeta: C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\lib.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\raw_field.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\offset_of.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\span_of.rs
+
+C:\Users\Garvit Agarwal\Desktop\htm\ZeroFi-solana-program-main\target\debug\deps\libmemoffset-ea4c98906ea8ceea.rlib: C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\lib.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\raw_field.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\offset_of.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\span_of.rs
+
+C:\Users\Garvit Agarwal\Desktop\htm\ZeroFi-solana-program-main\target\debug\deps\memoffset-ea4c98906ea8ceea.d: C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\lib.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\raw_field.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\offset_of.rs C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\span_of.rs
+
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\lib.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\raw_field.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\offset_of.rs:
+C:\Users\Garvit\ Agarwal\.cargo\registry\src\github.com-1ecc6299db9ec823\memoffset-0.9.0\src\span_of.rs:

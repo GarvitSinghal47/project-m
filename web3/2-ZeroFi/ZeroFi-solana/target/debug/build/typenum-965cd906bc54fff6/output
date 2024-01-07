@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\Garvit Agarwal\Desktop\htm\ZeroFi-solana-program-main\target\debug\build\typenum-965cd906bc54fff6\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\Garvit Agarwal\Desktop\htm\ZeroFi-solana-program-main\target\debug\build\typenum-965cd906bc54fff6\out\op.rs
